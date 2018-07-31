@@ -14,4 +14,4 @@ You may have use for some other VKE projects:
 * [Install VKE cli using homebrew](https://github.com/ali5ter/homebrew-vke-cli)
 * [VKE cli bash or zsh completion](https://github.com/ali5ter/vke-completion)
 * [Scripts used with VKE](https://github.com/ali5ter/vmware_scripts/tree/master/vke)
-* [Extended VKE cli functionality]()
+* [Extended VKE cli functionality](https://github.com/ali5ter/vke-prompt)
