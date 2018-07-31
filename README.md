@@ -11,9 +11,12 @@ You can hide the K8s current context in this prompt using
 `export VKE_PROMPT_CONTEXT_ENABLED='off'`. Useful if you're already using
 something like [kube-ps1](https://github.com/jonmosco/kube-ps1).
 
+## Pre-requisites
+[jq](https://stedolan.github.io/jq/download/) is used to parse JSON responses from the VKE CLI.
+
 ## Other VKE utilities
 You may have use for some other VKE projects:
-* [Install VKE cli using homebrew](https://github.com/ali5ter/homebrew-vke-cli)
-* [VKE cli bash or zsh completion](https://github.com/ali5ter/vke-completion)
+* [Install VKE CLI using homebrew](https://github.com/ali5ter/homebrew-vke-cli)
+* [VKE CLI bash or zsh completion](https://github.com/ali5ter/vke-completion)
 * [Scripts used with VKE](https://github.com/ali5ter/vmware_scripts/tree/master/vke)
-* [Extended VKE cli functionality](https://github.com/ali5ter/vke-prompt)
+* [Extended VKE CLI functionality](https://github.com/ali5ter/vke-prompt)
