@@ -4,7 +4,7 @@ Source this script from your `.bash_profile` and, in a new shell, enter
 `vke_prompt on` to display the VKE prompt. Remove the VKE prompt by entering
 `vke_prompt off`.
 
-![screencast demo of the vke prompt](https://raw.githubusercontent.com/ali5ter/vke-prompt/master/vke-prompt.gif)
+![screencast demo of the vke prompt](https://raw.githubusercontent.com/ali5ter/vke-prompt/master/vke_prompt.gif)
 
 ## Using with kube-ps1
 You can hide the K8s current context in this prompt using
