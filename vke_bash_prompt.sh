@@ -18,26 +18,27 @@ _vke_set_evars() {
 }
 
 _vke_prompt_user() {
-    vke -o json account show | jq -r '.sub'
+    \vke -o json account show | jq -r '.sub'
 }
 
 _vke_prompt_tenant() {
-    vke -o json account show | jq -r '.tenant' | cut -c1-8
+    jq -r '.Tenant.Name' ~/.vke-cli/vke-config | cut -c1-8
 }
 
 _vke_location() {
-    local folder=$(vke -o json folder get | jq -r .Name 2>/dev/null || echo '')
-    local project=$(vke -o json project get | jq -r .Name 2>/dev/null || echo '')
-    local _location=''
-    [[ -z ${folder} ]] || _location+="📁 ${folder}"
+    local folder=$(jq -r '. | select(.Folder.Name != null) | .Folder.Name' ~/.vke-cli/vke-config)
+    local project=$(jq -r '. | select(.GlobalProject.Name != null) | .GlobalProject.Name' ~/.vke-cli/vke-config)
+    local cluster=''
+    local location=''
+    [[ -z ${folder} ]] || location+="📁 ${folder}"
     [[ -z ${project} ]] || {
-        _location+=" 〉🗄   ${project}"
+        location+=" 〉🗄   ${project}"
         [[ "$VKE_PROMPT_CONTEXT_ENABLED" == 'on' ]] && {
-            local cluster=$(kubectl config current-context 2>/dev/null | sed 's/-context//' || echo '')
-            [[ -z ${cluster} ]] || _location+=" 〉📦 ${cluster}"
+            cluster=$(kubectl config current-context 2>/dev/null | sed 's/-context//' || echo '')
+            [[ -z ${cluster} ]] || location+=" 〉📦 ${cluster}"
         }
     }
-    echo "${_location}"
+    echo "${location}"
 }
 
 _vke_bash_prompt() {
