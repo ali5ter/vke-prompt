@@ -19,4 +19,4 @@ You may have use for some other Cloud PKS projects:
 * [Install Cloud PKS CLI using homebrew](https://github.com/ali5ter/homebrew-vke-cli)
 * [Cloud PKS CLI bash or zsh completion](https://github.com/ali5ter/vke-completion)
 * [Scripts used with Cloud PKS](https://github.com/ali5ter/vmware_scripts/tree/master/vke)
-* [Extended Cloud PKS CLI functionality](https://github.com/ali5ter/vke-prompt)
+* [Extended Cloud PKS CLI functionality](https://github.com/ali5ter/vke-cli-extended)
