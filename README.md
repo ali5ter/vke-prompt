@@ -1,4 +1,4 @@
-> **⚠️ Archived 2025-08-24. No longer maintained.**
+> **⚠️ Archived 2025-08-25. No longer maintained.**
 
 # vke-prompt
 [vke_bash_prompt.sh](vke_bash_prompt.sh) adds a Vmware Cloud PKS (formerly VKE) prompt to your `PS1`.
